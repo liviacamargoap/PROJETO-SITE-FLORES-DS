@@ -1,10 +1,15 @@
-:root{
-   --cor-primaria: #402647;
+:root {
+  /* Cores */
+  --cor-primaria: #402647;
   --cor-secundaria: #7a5a82;
   --cor-destaque: #f5d0e3;
   --cor-fundo: #5e3f66;
   --cor-escura: #2d1235;
-   
-   --fonte-principal: 'Arial', sans-serif;
+  --cinza-claro: lightgray;
+
+  /* Tipografia */
+  --fonte-principal: 'Arial', sans-serif;
+
+  /* Bordas */
   --borda-arredondada: 10px;
 }
