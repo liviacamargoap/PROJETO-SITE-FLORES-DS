@@ -1,0 +1,65 @@
+/* Estilo global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+  background-color: #1f042e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+}
+
+form {
+  background-color: #3e204b;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+fieldset {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+legend {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  grid-column: span 2;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: white;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
