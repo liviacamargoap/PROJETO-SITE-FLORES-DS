@@ -1,8 +1,8 @@
 :root {
-  --cor-primaria: #402647;
-  --cor-secundaria: #7a5a82;
-  --cor-destaque: #f5d0e3;
-  --cor-fundo: #5e3f66;
-  --cor-escura: #2d1235;
-  --cinza-claro: lightgray;
+  --cor-primaria-modo-escuro: #402647;
+  --cor-secundaria-modo-escuro: #7a5a82;
+  --cor-destaque-modo-escuro: #f5d0e3;
+  --cor-fundo-modo-escuro: #5e3f66;
+  --cor-escura-modo-escuro: #2d1235;
+  --cinza-claro-modo-escuro: lightgray;
 }
