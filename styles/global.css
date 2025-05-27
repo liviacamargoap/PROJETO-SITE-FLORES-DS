@@ -4,7 +4,7 @@ body {
   color: white;
 }
 
-/* Topo */
+
 .top-bar {
   display: flex;
   align-items: center;
@@ -21,7 +21,6 @@ body {
   border-radius: var(--borda-arredondada);
 }
 
-/* Menu */
 nav ul {
   display: flex;
   gap: 15px;
@@ -43,14 +42,13 @@ nav ul li button:hover {
   background-color: #96699d;
 }
 
-/* Banner */
 .banner {
   height: 200px;
   background-color: var(--cor-secundaria);
   margin-top: 10px;
 }
 
-/* Produtos */
+
 .produtos {
   background-color: var(--cor-escura);
   padding: 30px 20px;
