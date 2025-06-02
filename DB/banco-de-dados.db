@@ -21,9 +21,9 @@ VALUES  (buque1, descricao-buque1, 10,99, buque),
         (cesta3, descricao-cesta3, 20,99, cesta),
         (cesta4, descricao-cesta4, 20,99, cesta),
 
-        (arranjo1, descricao-arranjo1, 15,99, arranjo);
-        (arranjo2, descricao-arranjo2, 15,99, arranjo);
-        (arranjo3, descricao-arranjo3, 15,99, arranjo);
+        (arranjo1, descricao-arranjo1, 15,99, arranjo),
+        (arranjo2, descricao-arranjo2, 15,99, arranjo),
+        (arranjo3, descricao-arranjo3, 15,99, arranjo),
         (arranjo4, descricao-arranjo4, 15,99, arranjo);
 
 create table tb_fotos_produto(
