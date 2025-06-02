@@ -75,3 +75,42 @@ nav ul li button:hover {
   height: 20px;
   background-color: var(--cinza-claro);
 }
+
+.container{
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--cor-primaria);
+  padding: 10px 20px;
+  gap: 20px;
+  color: white;
+}
+
+.top-bar h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+.btn-voltar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-destaque);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 2px solid var(--cor-destaque);
+}
+
+.btn-voltar:hover {
+  background-color: var(--cor-secundaria);
+  color: white;
+  border-color: white;
+}
+
