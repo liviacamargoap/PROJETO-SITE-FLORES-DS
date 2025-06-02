@@ -114,3 +114,41 @@ nav ul li button:hover {
   border-color: white;
 }
 
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Estilos base para ambos os botões */
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Botão Carrinho */
+button.carrinho {
+  background-color: var(--cor-secundaria);
+  color: white;
+}
+
+button.carrinho:hover {
+  background-color: var(--cor-primaria);
+}
+
+/* Botão Cancelar */
+button.cancelar {
+  background-color: var(--cor-destaque);
+  color: var(--cor-escura);
+}
+
+button.cancelar:hover {
+  background-color: var(--cinza-claro);
+  color: var(--cor-escura);
+}
