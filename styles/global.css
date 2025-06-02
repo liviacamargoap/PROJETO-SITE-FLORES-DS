@@ -82,6 +82,28 @@ nav ul li button:hover {
   display: flex;
   flex-direction: row;
   background-color: var(--cor-primaria-modo-escuro);
-  color: white
+  color: white;
+  padding: 5px;
 }
 
+.btn-header__login{
+  text-decoration: none;
+  width: 50px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--cor-destaque-modo-escuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-header__cadastro{
+  text-decoration: none;
+  width: 70px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--cor-destaque-modo-escuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
