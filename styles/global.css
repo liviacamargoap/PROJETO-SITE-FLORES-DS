@@ -76,6 +76,12 @@ nav ul li button:hover {
   background-color: var(--cinza-claro);
 } */
 
+
+  body{
+    background: linear-gradient(var(--cor-secundaria-modo-escuro), var(--cor-primaria-modo-escuro));
+  }
+
+/* HEADER */
 .container__header{
   width: 100%;
   height: 120px;
@@ -106,4 +112,42 @@ nav ul li button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/* BANNER */
+.banner__promocoes{
+background-color: transparent;
+width: 100%;
+height: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* PRODUTOS */
+.produtos{
+  background-color: var(--cor-primaria-modo-escuro);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-top: solid 5px var(--cor-secundaria-modo-escuro);
+  border-bottom: solid 5px var(--cor-secundaria-modo-escuro);
+}
+.produto__venda{
+background-color: var(--cor-secundaria-modo-escuro);
+width: 100%;
+height: 500px;
+color: white;
+margin: 20px;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+/* FOOTER */
+.footer__creditos{
+  color: white;
+  display: flex;
+  background-color: var(--cor-primaria-modo-escuro);
 }
