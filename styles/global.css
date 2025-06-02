@@ -154,38 +154,3 @@ button.cancelar:hover {
 }
 
 
-
-/* Estilos para o topo do header */
-.header--top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-
-
-/* Estilos para a navegação */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 10px 15px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: var(--cor-destaque); /* Cor de fundo no hover */
-  color: white; /* Cor do texto no hover */
-  border-radius: 5px;
-}
