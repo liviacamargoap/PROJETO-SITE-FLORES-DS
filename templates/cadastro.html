@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>    
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/var.css">
-    <link rel="stylesheet" href="/styles/global.css">
+<head>  
+
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/var.css">
+  <link rel="stylesheet" href="/styles/global.css">
 
   <meta charset="UTF-8">
-  <title>Formulário de Cadastro -  Flores</title>
+  <title>Formulário de Cadastro</title>
+
 </head>
 
+<body>
 
-<header class="menu">
+  <header class="header">
+    <div class="header__container">
 
-</header>
+      <figure class="header__logo">
+        <img src="/img/logoAuraFloralCadastro.svg" alt="Logo da Aura Floral">
+      </figure>
 
-<body class="corpo-principal">
+      <button class="header__button header__button--login">Login</button>
+      <button class="header__button header__button--cadastro">Cadastro</button>
 
-  <main class="main-cadastro">
-    <section class="engloba-form">
-      <form action="#" method="post" class="fomulario-cadastro">
-        <fieldset>
+    </div>
+  </header>
 
-          <legend>Cadastro</legend>
+  <main class="cadastro">
+    <section class="cadastro__form-container">
 
-          <div>
-            <label for="usuario">Usuario</label><br>
-            <input type="text" id="usuario" name="usuario">
+      <form action="#" method="post" class="cadastro__form">
+        <fieldset class="cadastro__campoInfo">
+
+          <legend class="cadastro__cadastro">Cadastro</legend>
+
+          <div class="cadastro__campoUsuario">
+            <label for="usuario" class="cadastro__usuario">Usuário</label><br>
+            <input type="text" id="usuario" name="usuario" class="cadastro__input">
           </div>
 
-          <div>
-            <label for="endereco">Endereço</label><br>
-            <input type="text" id="endereco" name="endereco">
+          <div class="cadastro__campoEndereco">
+            <label for="endereco" class="cadastro__endereco">Endereço</label><br>
+            <input type="text" id="endereco" name="endereco" class="cadastro__input">
           </div>
 
-          <div>
-            <label for="senha">Senha</label><br>
-            <input type="password" id="senha" name="senha">
+          <div class="cadastro__campoSenha">
+            <label for="senha" class="cadastro__senha">Senha</label><br>
+            <input type="password" id="senha" name="senha" class="cadastro__input">
           </div>
 
-          <div>
-            <button type="submit">Cadastrar</button>
+          <div class="cadastro__campoCadastrar">
+            <button type="submit" class="cadastro__btnCadastrar">Cadastrar</button>
           </div>
 
         </fieldset>
       </form>
+      
     </section>
   </main>
 
