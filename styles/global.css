@@ -336,3 +336,14 @@ footer{
 .comprar-btn:hover {
   background-color: var(--rosa-claro);
 }
+
+
+/* Footer */
+footer{
+  background-color: #4B2C4F;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
