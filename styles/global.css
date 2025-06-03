@@ -152,3 +152,79 @@ button.cancelar:hover {
   background-color: var(--cinza-claro);
   color: var(--cor-escura);
 }
+
+
+.logo img{
+  height: 60px;
+}   
+
+
+.header--top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+nav{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav button{
+  background-color: #BD909B;
+  border: 1px solid #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button a {
+  text-decoration: none;
+  color: #2C1435;
+}
+
+nav button:hover{
+  background-color:#BD909B ;
+}
+
+
+ul{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+
+ul li a .btn-header{
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+}
+
+ul li a.btn-header:hover {
+  background-color:#BD909B ;
+}
+
+.perfil img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* Footer */
+footer{
+  background-color: #4B2C4F;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
