@@ -21,18 +21,26 @@ VALUES  (buque1, descricao-buque1, 10,99, buque),
         (cesta3, descricao-cesta3, 20,99, cesta),
         (cesta4, descricao-cesta4, 20,99, cesta),
 
-        (arranjo1, descricao-arranjo1, 15,99, arranjo);
-        (arranjo2, descricao-arranjo2, 15,99, arranjo);
-        (arranjo3, descricao-arranjo3, 15,99, arranjo);
+        (arranjo1, descricao-arranjo1, 15,99, arranjo),
+        (arranjo2, descricao-arranjo2, 15,99, arranjo),
+        (arranjo3, descricao-arranjo3, 15,99, arranjo),
         (arranjo4, descricao-arranjo4, 15,99, arranjo);
 
 create table tb_fotos_produto(
-	cod_foto int PRIMARY KEY,
+	cod_foto int PRIMARY KEY auto_increment,
     FOREIGN KEY (IDflor) REFERENCES IDflor(IDflor),
     url_foto1 varchar(50),
     url_foto2 varchar(50),
     url_foto3 varchar(50),
     foto_principal varchar(50)
+);
+
+create table tb_usuario(
+    nome varchar(50) NOT NULL,
+    email varchar(50) PRIMARY KEY, 
+    telefone int NOT NULL,
+    endereco varchar(50) NOT NULL,
+    senha varchar(20) NOT NULL
 );
 
 create table tb_compra (
