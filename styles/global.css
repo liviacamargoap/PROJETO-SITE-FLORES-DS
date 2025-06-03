@@ -159,7 +159,7 @@ button.cancelar:hover {
 }   
 
 header {
-  background-color: #4B2C4F;
+  background-color: var( --ameixa-escura);
   border-bottom: 1px solid #ddd;
   padding: 5px 20px;
 }
@@ -179,7 +179,7 @@ nav{
 }
 
 nav button{
-  background-color: #BD909B;
+  background-color: var( --rosa-empoeirado);
   border: 1px solid #FFFFFF;
   padding: 8px 12px;
   border-radius: 5px;
@@ -193,7 +193,7 @@ nav button a {
 }
 
 nav button:hover{
-  background-color:#BD909B ;
+  background-color:var( --rosa-empoeirado);
 }
 
 
