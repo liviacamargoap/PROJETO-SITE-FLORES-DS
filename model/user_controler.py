@@ -41,7 +41,7 @@ class Usuario:
                 cursor = conexao.cursor(dictionary=True)
 
                 # criando o SQL que será executado
-                sql = """SELECT email, senha FROM tb_usuario
+                sql = """SELECT email, nome FROM tb_usuario
                         WHERE email = %s
                         AND senha = %s """
                 valores=(email, senha)
@@ -58,12 +58,12 @@ class Usuario:
                 cursor.close()
                 conexao.close()
 
-                # if resultado:
-                #         session["email"] = resultado["email"]
-                #         session["nome_usuario"] = resultado["senha"]
-                #         return True
-                # else:
-                #         return False
+                if resultado:
+                        session["email_usuario"] = resultado["email"]
+                        session["nome_usuario"] = resultado["nome"]
+                        return True
+                else:
+                        return False
         
         def logoff():
                 session.clear()
