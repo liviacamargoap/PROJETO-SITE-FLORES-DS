@@ -153,11 +153,16 @@ button.cancelar:hover {
   color: var(--cor-escura);
 }
 
-
+/* ------------------------------------------------------------------------- */
 .logo img{
   height: 60px;
 }   
 
+header {
+  background-color: #4B2C4F;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 20px;
+}
 
 .header--top{
   display: flex;
@@ -199,18 +204,15 @@ ul{
 }
 
 
-ul li a .btn-header{
+ul li a.btn-header {
   text-decoration: none;
   color: #FFFFFF;
   padding: 8px 10px;
   border-radius: 4px;
   transition: background-color 0.3s;
-
 }
 
-ul li a.btn-header:hover {
-  background-color:#BD909B ;
-}
+
 
 .perfil img{
   height: 40px;
