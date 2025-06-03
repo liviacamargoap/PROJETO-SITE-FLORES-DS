@@ -21,4 +21,26 @@ def deslogar():
     session.clear()
     return redirect("/")
 
+
+@app.route("/buques")
+def pagina_buque():
+    return render_template("buque.html")
+
+@app.route("/cestas")
+def pagina_cesta():
+    return render_template("cestas.html")
+
+@app.route("/arranjos")
+def pagina_arranjo():
+    return render_template("arranjos.html")
+
+@app.route("/compras")
+def pagina_compra():
+    return render_template("compras.html")
+
+@app.route("/cadastro")
+def pagina_cadastro():
+    return render_template("cadastro.html")
+
+
 app.run(debug = True)
