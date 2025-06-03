@@ -3,7 +3,7 @@ from flask import session
 from data.conexao import Conexao
 
 class Usuario:
-        def cadastrar(nome, login, senha):
+        def cadastrar(nome, email, telefone, endereco, senha):
                 #  criptografando a senha
                 senha = sha256(senha.encode()).hexdigest()
 
@@ -14,11 +14,11 @@ class Usuario:
                 cursor = conexao.cursor()
 
                 # criando o SQL que será executado
-                sql = """INSERT INTO tb_usuarios
-                        (nome, login, senha)
+                sql = """INSERT INTO tb_usuario
+                        (nome, email, telefone, endereco, senha)
                         VALUES
-                        (%s, %s, %s)"""
-                valores=(nome, login, senha)
+                        (%s, %s, %s, %s, %s)"""
+                valores=(nome, email, telefone, endereco, senha)
 
                 # executando o comando 
                 cursor.execute(sql,valores)
@@ -30,7 +30,7 @@ class Usuario:
                 cursor.close()
                 conexao.close()
     
-        def login(login, senha):
+        def login(email, senha):
                 #  criptografando a senha
                 senha = sha256(senha.encode()).hexdigest()
 
@@ -41,10 +41,10 @@ class Usuario:
                 cursor = conexao.cursor(dictionary=True)
 
                 # criando o SQL que será executado
-                sql = """SELECT login, nome FROM tb_usuarios
-                        WHERE login = %s
+                sql = """SELECT email, senha FROM tb_usuario
+                        WHERE email = %s
                         AND senha = %s """
-                valores=(login, senha)
+                valores=(email, senha)
 
                 # executando o comando 
                 cursor.execute(sql,valores)
@@ -58,12 +58,12 @@ class Usuario:
                 cursor.close()
                 conexao.close()
 
-                if resultado:
-                        session["usuario"] = resultado["login"]
-                        session["nome_usuario"] = resultado["nome"]
-                        return True
-                else:
-                        return False
+                # if resultado:
+                #         session["email"] = resultado["email"]
+                #         session["nome_usuario"] = resultado["senha"]
+                #         return True
+                # else:
+                #         return False
         
         def logoff():
                 session.clear()
