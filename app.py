@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, session
+from model.produtos_controler import Produtos
 
 app = Flask(__name__)
 
@@ -21,6 +22,12 @@ def deslogar():
     session.clear()
     return redirect("/")
 
+# ajuda alex Filtro
+# ve a categoria selecionada e direciona pro sql (cod no controller)
+@app.route("/categoria/<filtro>")
+def pagina_buque(filtro):
+    lista_produtos = Produtos.obter_produtos(filtro)
+    return render_template("produtos.html", lista_produtos_html = lista_produtos) 
 
 @app.route("/buques")
 def pagina_buque():
