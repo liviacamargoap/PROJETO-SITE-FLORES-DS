@@ -1,61 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Formulário de Cadastro</title>
 
   <link rel="stylesheet" href="/styles/reset.css">
   <link rel="stylesheet" href="/styles/var.css">
   <link rel="stylesheet" href="/styles/global.css">
-
-  <meta charset="UTF-8">
-  <title>Formulário de Cadastro</title>
-
 </head>
 
 <body>
 
   <header class="header">
-     <div class="header--top">
-          <div class="logo">
-            <img src="/img/Logo.jpg" alt="Logo Aura Floral">
-          </div>
-<div class="perfil">
-              <img src="/img/iconProfileInicial.jpg" alt="Perfil">
-            </div>
+    <div class="header--top">
+      <div class="logo">
+        <img src="/img/Logo.jpg" alt="Logo Aura Floral">
+      </div>
+      <div class="perfil">
+        <img src="/img/iconProfileInicial.jpg" alt="Ícone do perfil">
+      </div>
+    </div>
   </header>
 
-  <main class="cadastro">
-    <section class="cadastro__form-container">
-
-      <form action="#" method="post" class="cadastro__form">
-        <fieldset class="cadastro__campoInfo">
-
-          <legend class="cadastro__cadastro">Cadastro</legend>
-
-          <div class="cadastro__campoUsuario">
-            <label for="usuario" class="cadastro__usuario">Usuário</label><br>
-            <input type="text" id="usuario" name="usuario" class="cadastro__input">
-          </div>
-
-          <div class="cadastro__campoEndereco">
-            <label for="endereco" class="cadastro__endereco">Endereço</label><br>
-            <input type="text" id="endereco" name="endereco" class="cadastro__input">
-          </div>
-
-          <div class="cadastro__campoSenha">
-            <label for="senha" class="cadastro__senha">Senha</label><br>
-            <input type="password" id="senha" name="senha" class="cadastro__input">
-          </div>
-
-          <div class="cadastro__campoCadastrar">
-            <button type="submit" class="cadastro__btnCadastrar">Cadastrar</button>
-          </div>
-
-        </fieldset>
+  <main class="container"> 
+    <section class="box">
+      <div class="mensagem">
+        <p><strong>Bem-vindo(a) à Aura Floral!</strong><br>
+          Cadastre-se para receber novidades e ofertas especiais para deixar seu dia mais florido!
+        </p>
+      </div>
+      <form class="formulario">
+        <div class="inputs">
+          <label>
+            <input type="text" name="nome" placeholder="Nome Completo..." required>
+          </label>
+          <label>
+            <input type="tel" name="telefone" placeholder="Telefone..." required>
+          </label>
+        </div>
+        <label>
+          <input type="text" name="cep" placeholder="Informe seu CEP..." required class="cep">
+        </label>
+        <button type="submit">Finalizar Cadastro</button>
       </form>
-      
+      <p class="login">Já possui cadastro? <a href="#">Clique aqui para logar</a></p>
     </section>
   </main>
 
 </body>
+
 </html>
