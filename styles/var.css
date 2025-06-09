@@ -1,6 +1,14 @@
 :root {
-    --Roxo-Profundo-Background: #2C1435;
-    --Ameixa-Queimada-Menus-Headers: #4B2C4F;
-    --Violeta-Fumê-Para-detalhes: #6C4A6E;
-    --Rosa-Coral-Claro: #F6C1C1;
+  /* Cores */
+  --cor-primaria: #402647;
+  --cor-secundaria: #7a5a82;
+  --cor-destaque: #f5d0e3;
+  --cor-fundo: #5e3f66;
+  --cor-escura: #2d1235;
+  --cinza-claro: lightgray;
+  --azul-cinza-escuro: #2C1435;
+  --ameixa-escura: #4B2C4F;
+  --roxo-suave: #6C4A6E;
+  --rosa-empoeirado: #BD909B;
+  --rosa-claro: #F6C1C1;
 }
