@@ -11,24 +11,26 @@ create table tb_flores (
 );
 
 INSERT INTO tb_flores (nome, descricao, preco, categoria)
-VALUES  (buque1, descricao-buque1, 10,99, buque),
-        (buque2, descricao-buque2, 10,99, buque),
-        (buque3, descricao-buque3, 10,99, buque),
-        (buque4, descricao-buque4, 10,99, buque),
+VALUES  ('buque1', 'descricao-buque1', 10.99, 'buque'),
+        ('buque2', 'descricao-buque2', 10.99, 'buque'),
+        ('buque3', 'descricao-buque3', 10.99, 'buque'),
+        ('buque4', 'descricao-buque4', 10.99, 'buque'),
 
-        (cesta1, descricao-cesta1, 20,99, cesta),
-        (cesta2, descricao-cesta2, 20,99, cesta),
-        (cesta3, descricao-cesta3, 20,99, cesta),
-        (cesta4, descricao-cesta4, 20,99, cesta),
+        ('cesta1', 'descricao-cesta1', 20.99, 'cesta'),
+        ('cesta2', 'descricao-cesta2', 20.99, 'cesta'),
+        ('cesta3', 'descricao-cesta3', 20.99, 'cesta'),
+        ('cesta4', 'descricao-cesta4', 20.99, 'cesta'),
 
-        (arranjo1, descricao-arranjo1, 15,99, arranjo),
-        (arranjo2, descricao-arranjo2, 15,99, arranjo),
-        (arranjo3, descricao-arranjo3, 15,99, arranjo),
-        (arranjo4, descricao-arranjo4, 15,99, arranjo);
+        ('arranjo1', 'descricao-arranjo1', 15.99, 'arranjo'),
+        ('arranjo2', 'descricao-arranjo2', 15.99, 'arranjo'),
+        ('arranjo3', 'descricao-arranjo3', 15.99, 'arranjo'),
+        ('arranjo4', 'descricao-arranjo4', 15.99, 'arranjo');
+
 
 create table tb_fotos_produto(
 	cod_foto int PRIMARY KEY auto_increment,
-    FOREIGN KEY (IDflor) REFERENCES IDflor(IDflor),
+    IDflor INT, 
+    FOREIGN KEY (IDflor) REFERENCES tb_flores(IDflor),
     url_foto1 varchar(50),
     url_foto2 varchar(50),
     url_foto3 varchar(50),
@@ -45,5 +47,6 @@ create table tb_usuario(
 
 create table tb_compra (
 	codCompra int auto_increment PRIMARY KEY,
+	IDflor INT,
     FOREIGN KEY (IDflor) REFERENCES tb_flores(IDflor)
 );
