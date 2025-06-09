@@ -63,3 +63,23 @@ button {
   font-weight: bold;
   cursor: pointer;
 } */
+
+
+.perfil img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+header {
+  background-color: var( --ameixa-escura);
+  border-bottom: 1px solid #ddd;
+  padding: 5px 20px;
+}
+
+.header--top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
