@@ -2,46 +2,50 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/var.css">
-    <link rel="stylesheet" href="/styles/global.css">
-    
   <meta charset="UTF-8">
-  <title>Formulário de Cadastro -  Flores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Formulário de Cadastro</title>
+
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/var.css">
+  <link rel="stylesheet" href="/styles/global.css">
 </head>
 
+<body>
 
-<header class="menu">
+  <header class="header">
+    <div class="header--top">
+      <div class="logo">
+        <img src="/img/Logo.jpg" alt="Logo Aura Floral">
+      </div>
+      <div class="perfil">
+        <img src="/img/iconProfileInicial.jpg" alt="Ícone do perfil">
+      </div>
+    </div>
+  </header>
 
-</header>
-
-<body class="corpo-principal">
-
-  <main class="main-cadastro">
-    <section class="engloba-form">
-      <form action="#" method="post" class="fomulario-cadastro">
-        <fieldset>
-
-          <legend>Login</legend>
-
-          <div>
-            <label for="usuario">Usuario</label><br>
-            <input type="text" id="usuario" name="usuario">
-          </div>
-
-          <div>
-            <label for="senha">Senha</label><br>
-            <input type="password" id="senha" name="senha">
-          </div>
-
-          <div>
-            <button type="submit">Fazer Login</button>
-          </div>
-
-        </fieldset>
+  <main class="container"> 
+    <section class="box">
+      <div class="mensagem">
+        <p><strong>Bem-vindo(a) à Aura Floral!</strong><br>
+        Entre na sua conta para receber novidades e ofertas especiais para deixar seu dia mais florido!
+        </p>
+      </div>
+      <form class="formulario">
+        <div class="inputs">
+          <label>
+            <input type="text" name="nome" placeholder="Nome Completo..." required>
+          </label>
+          <label>
+            <input type="tel" name="telefone" placeholder="Telefone..." required>
+          </label>
+        </div>
+        <button type="submit">Finalizar Login</button>
       </form>
+      <p class="login">Já possui cadastro? <a href="#">Clique aqui para se cadastar</a></p>
     </section>
   </main>
 
 </body>
+
 </html>
