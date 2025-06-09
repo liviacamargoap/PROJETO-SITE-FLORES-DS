@@ -9,3 +9,14 @@ class Conexao:
             database = "dbFeedback"
     )
         return conexao
+    
+    # def criar_conexao():
+    #     conexao = mysql.connector.connect(
+    #         host = "projeto-site-flores-db-projeto-site-flores.c.aivencloud.com",
+    #         port = 28977,
+    #         user = "avnadmin",
+    #         password = "AVNS_V1fn2-jAXLaPIF5xW6h",
+    #         database = "defaultdb"
+    # )
+    #     return conexao
+    
