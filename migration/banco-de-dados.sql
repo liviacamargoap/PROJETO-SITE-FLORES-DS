@@ -37,6 +37,14 @@ create table tb_fotos_produto(
     foto_principal varchar(50)
 );
 
+INSERT INTO tb_fotos_produto(foto_principal, url_foto1, url_foto2, url_foto3)
+-- arranjo
+VALUES  ('https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+-- buque
+('https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+-- cestas
+('https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp');
+
 create table tb_usuario(
     nome varchar(50) NOT NULL,
     email varchar(50) PRIMARY KEY, 
