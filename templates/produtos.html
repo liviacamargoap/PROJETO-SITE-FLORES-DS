@@ -15,16 +15,24 @@
   <header>
     <div class="container__header">
 
-      <div class="btn-header__login"> Login </div>
-      <div class="btn-header__cadastro"> Cadastro </div>
+      <!-- LOGIN E LOGOFF IF COM JINJA -->
+      {% if session.nome %}
+      <div class="login__header"><a href="/logoff">Logoff</a></div>
+      <div class="nome__header"><a href="">{{session.nome}}</a></div>
+      {% else %}
+      <div class="login__header"><a href="/login">Login</a></div>
+      <div class="nome__header"><a href="">ANONIMO</a></div>
+      {% endif %}
 
       <nav>
-        <ul>
+        <ul class="menu__header">
           <li><a href="/" class="menu__header-opcoes">Início</a></li>
           <li><a href="/categoria/<filtro>" class="menu__header-opcoes">Buquês</a></li>
           <li><a href="/categoria/<filtro>" class="menu__header-opcoes">Cestas de Presente</a></li>
           <li><a href="/categoria/<filtro>" class="menu__header-opcoes">Arranjos</a></li>
-          <li><a href="/categoria/todos" class="menu__header-opcoes">Todos</a></li>
+          <li><a href="/categoria/todos" class="menu__header-opcoes">Categorias</a></li>
+          <li><a href="/compras" class="menu__header-opcoes">Compras</a></li>
+          <span class="material-symbols-outlined">shopping_cart</span>
         </ul>
       </nav>
 
