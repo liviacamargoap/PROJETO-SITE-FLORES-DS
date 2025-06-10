@@ -22,6 +22,13 @@ def deslogar():
     session.clear()
     return redirect("/")
 
+@app.route("/cadastro")
+def pagina_cadastro():
+    return render_template("cadastro.html")
+
+
+
+
 # ajuda alex Filtro
 # ve a categoria selecionada e direciona pro sql (cod no controller)
 @app.route("/categoria/<filtro>")
@@ -29,25 +36,16 @@ def pagina_buque(filtro):
     lista_produtos = Produtos.obter_produtos(filtro)
     return render_template("produtos.html", lista_produtos_html = lista_produtos) 
 
-@app.route("/buques")
-def pagina_buque():
-    return render_template("buque.html")
 
-@app.route("/cestas")
-def pagina_cesta():
-    return render_template("cestas.html")
 
-@app.route("/arranjos")
-def pagina_arranjo():
-    return render_template("arranjos.html")
+
+
 
 @app.route("/compras")
 def pagina_compra():
     return render_template("compras.html")
 
-@app.route("/cadastro")
-def pagina_cadastro():
-    return render_template("cadastro.html")
+
 
 
 app.run(debug = True)
