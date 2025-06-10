@@ -51,6 +51,10 @@ def pagina_produtos():
 def pagina_compra():
     return render_template("compras.html")
 
+@app.route("/detalhes")
+def pagina_detalhes():
+    return render_template("detalhes-produto.html")
+
 
 
 
