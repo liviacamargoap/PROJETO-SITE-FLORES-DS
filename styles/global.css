@@ -290,3 +290,102 @@ footer{
   padding: 20px;
   border-radius: 10px;
 }
+ /* Filtro Inicial */
+.produtos-inicial{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.produto-inicial{
+  background-color: var(--ameixa-escura);
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto-inicial img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.produto-inicial p{
+  margin: 10px 0;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+
+.comprar-btn{
+  background-color: var(--rosa-claro);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.comprar-btn:hover {
+  background-color: var(--rosa-claro);
+}
+
+
+/* Footer */
+footer{
+  background-color: #4B2C4F;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.comentarios {
+    margin-top: 20px;
+    background-color: var( --rosa-empoeirado);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.comentario {
+    display: flex;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #d0c7c7;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.usuario {
+    margin-right: 10px;
+}
+
+.foto-usuario {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nome-usuario {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.texto-comentario {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 5px;
+}
+
