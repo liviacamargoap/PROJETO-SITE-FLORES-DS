@@ -31,10 +31,10 @@ create table tb_fotos_produto(
 	cod_foto int PRIMARY KEY auto_increment,
     IDflor INT, 
     FOREIGN KEY (IDflor) REFERENCES tb_flores(IDflor),
-    url_foto1 varchar(50),
-    url_foto2 varchar(50),
-    url_foto3 varchar(50),
-    foto_principal varchar(50)
+    url_foto1 varchar(250),
+    url_foto2 varchar(250),
+    url_foto3 varchar(250),
+    foto_principal varchar(250)
 );
 
 INSERT INTO tb_fotos_produto(foto_principal, url_foto1, url_foto2, url_foto3)
