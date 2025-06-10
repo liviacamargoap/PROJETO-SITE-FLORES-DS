@@ -7,13 +7,31 @@ body {
   align-items: center;
 }
 
+/* Header geral */
 .header {
   width: 100%;
-  padding: 10px;
+   background: linear-gradient(to bottom, var(--rosa-empoeirado), var( --ameixa-escura));
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+/* Parte de cima do header (logo + perfil) */
+.header--top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--cor-primaria);
+}
+
+/* Logo */
+.logo img {
+  height: 50px; /* ajuste conforme o tamanho real da logo */
+}
+
+/* Ícone de perfil */
+.perfil img {
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff; /* opcional, só pra dar destaque */
 }
 
 
