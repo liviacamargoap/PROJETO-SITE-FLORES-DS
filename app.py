@@ -32,9 +32,15 @@ def pagina_cadastro():
 # ajuda alex Filtro
 # ve a categoria selecionada e direciona pro sql (cod no controller)
 @app.route("/categoria/<filtro>")
-def pagina_buque(filtro):
+def pagina_produto(filtro):
     lista_produtos = Produtos.obter_produtos(filtro)
     return render_template("produtos.html", lista_produtos_html = lista_produtos) 
+
+@app.route("/categoria/todos")
+def pagina_produtos():
+    lista_produtos = Produtos.obter_todos_produtos()
+    return render_template("produtos.html", lista_produtos_html = lista_produtos) 
+
 
 
 

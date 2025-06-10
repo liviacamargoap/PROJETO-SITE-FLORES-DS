@@ -6,7 +6,7 @@ class Conexao:
             port = 3306,
             user = "root",
             password = "root",
-            database = "dbFeedback"
+            database = "db_site_flores"
     )
         return conexao
     

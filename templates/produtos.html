@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/static/styles/var.css">
   <link rel="stylesheet" href="/static/styles/reset.css">
   <link rel="stylesheet" href="/static/styles/global.css">
-  <title>Buquês</title>
+  <title>categorias</title>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
   <main>
 
     <section class="banner__promocoes">
-      <img src="/static/img/flor01.jpg" alt="Buque....">
+      <img src="/static/img/cardRosasNacionais.png" alt="Banner">
     </section>
 
 
@@ -44,31 +44,8 @@
   <section class="produtos">
 
 
-
-
-
-
-    <article class="produto__venda">
-        <div class="produto__imagem">
-          <img src="/static/img/flor01.jpg" alt="Buque....">
-        </div>
-
-        <div class="produto__descricao">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quos, maiores dolores velit temporibus.</p>
-        </div>
-
-         <button>Ver mais...</button> <!-- add rota p esse bnt enviar  -->
-
-    </article>
-
-
-
-
-
-
-
     {% for produto in lista_produtos_html %}
-<article class="produto__venda">
+    <article class="produto__venda">
     <div class="produto__imagem">
       <!-- url da imagem -->
       <!-- NECESSARIO FAER INNER JOIN ENTRE DOIS SELECT PRA PEGAR AS FOTOS NO CONTROLER -->
