@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compras</title>
-    <link rel="stylesheet" href="/styles/var.css">
-    <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/var.css">
 </head>
 <body>
-    <!-- <header>
+    <header>
       
         <div class="header--top">
           <div class="logo">
@@ -31,35 +31,7 @@
             </div>
           </nav>
         </div>
-    </header> -->
-
-    <header>
-      <div class="container__header">
-  
-        <!-- LOGIN E LOGOFF IF COM JINJA -->
-        {% if session.nome %}
-        <div class="login__header"><a href="/logoff">Logoff</a></div>
-        <div class="nome__header"><a href="">{{session.nome}}</a></div>
-        {% else %}
-        <div class="login__header"><a href="/login">Login</a></div>
-        <div class="nome__header"><a href="">ANONIMO</a></div>
-        {% endif %}
-  
-        <nav>
-          <ul class="menu__header">
-            <li><a href="/" class="menu__header-opcoes">Início</a></li>
-            <li><a href="/categoria/<filtro>" class="menu__header-opcoes">Buquês</a></li>
-            <li><a href="/categoria/<filtro>" class="menu__header-opcoes">Cestas de Presente</a></li>
-            <li><a href="/categoria/<filtro>" class="menu__header-opcoes">Arranjos</a></li>
-            <li><a href="/categoria/todos" class="menu__header-opcoes">Categorias</a></li>
-            <li><a href="/compras" class="menu__header-opcoes">Compras</a></li>
-            <span class="material-symbols-outlined">shopping_cart</span>
-          </ul>
-        </nav>
-  
-      </div>
     </header>
-    
     <main class="produto--container">
       <div class="produto-img">
         <img src="/img/Buque.jpg" alt="Buquê de Flores do Campo em Tons Rosados">
@@ -71,6 +43,31 @@
 
       </div>
     </main>
+    <section class="comentarios">
+    <h3>Comentários</h3>
+    <div class="comentario">
+        <div class="usuario">
+            <img src="/img/Daniel-Perfil.jpg" alt="Foto de Daniel de Sá" class="foto-usuario">
+            <span class="nome-usuario">Daniel de Sá</span>
+        </div>
+        <p class="texto-comentario">
+            Estou encantado com a qualidade! A flor chegou perfeita, com cores vibrantes e um perfume delicado. Além disso, o atendimento foi impecável, com toda a atenção e cuidado que se espera.
+        </p>
+    </div>
+
+    <div class="comentario">
+        <div class="usuario">
+            <img src="/img/Maria-Perfil.jpg" alt="Foto de Maria Fosiliza" class="foto-usuario">
+            <span class="nome-usuario">Maria Fosiliza</span>
+        </div>
+        <p class="texto-comentario">
+            Comprei uma flor na sua floricultura e gostei bastante da qualidade. A flor chegou bem conservada e com cores bonitas.
+        </p>
+    </div>
+
+    
+</section>
+
  
   <footer>
     <p>&copy; 2025 Aura Floral.</p>
