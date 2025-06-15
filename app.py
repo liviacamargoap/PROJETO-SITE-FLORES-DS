@@ -38,8 +38,8 @@ def pagina_produto(filtro):
 
 @app.route("/categoria/todos")
 def pagina_produtos():
-    lista_produtos = Produtos.obter_todos_produtos()
-    return render_template("produtos.html", lista_produtos_html = lista_produtos) 
+    lista_todos_produtos = Produtos.obter_todos_produtos()
+    return render_template("inicial.html", lista_todos_produtos_html = lista_todos_produtos) 
 
 
 

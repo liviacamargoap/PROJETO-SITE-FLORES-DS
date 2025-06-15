@@ -37,19 +37,19 @@
   </header>
 
   <section>
-    {% for produto in lista_produtos_html %}
+    {% for produtos in lista_todos_produtos_html %}
     <article class="produto__venda">
       <div class="produto__imagem">
         <!-- url da imagem -->
         <!-- NECESSARIO FAZER INNER JOIN ENTRE DOIS SELECT PRA PEGAR AS FOTOS NO CONTROLER -->
-        <img src="{{ produto.foto_principal }}" alt="Buque de {{ produto.nome }}">
+        <img src="{{ produtos.foto_principal }}" alt="{{ produtos.nome }}">
       </div>
 
       <div class="produto__descricao">
-        <h3>{{ produto.nome }}</h3> <!-- Nome do produto -->
-        <p>{{ produto.descricao }}</p> <!-- Descrição do produto -->
-        <p>Preço: R$ {{ produto.preco }}</p> <!-- Preço do produto -->
-        <p>Categoria: {{ produto.categoria }}</p> <!-- Categoria do produto -->
+        <h3>{{ produtos.nome }}</h3> <!-- Nome do produto -->
+        <p>{{ produtos.descricao }}</p> <!-- Descrição do produto -->
+        <p>Preço: R$ {{ produtos.preco }}</p> <!-- Preço do produto -->
+        <p>Categoria: {{ produtos.categoria }}</p> <!-- Categoria do produto -->
       </div>
 
       <button><a href="/detalhes">Ver mais <span class="material-symbols-outlined">
