@@ -1,76 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person" />
+  <title>Formulário de Cadastro</title>
+
     <link rel="stylesheet" href="/static/styles/var.css">
     <link rel="stylesheet" href="/static/styles/reset.css">
-    <link rel="stylesheet" href="/static/styles/global.css">
-    <title>Inicial-Flores</title>
-    
-    <link rel="stylesheet" href="/styles/global.css">
-
+    <link rel="stylesheet" href="/static/styles/global-cadastro.css">   
 </head>
+
 <body>
-    <header>
-        <div class="container__header">
-    
-          <!-- LOGIN E LOGOFF IF COM JINJA -->
-          {% if session.nome %}
-          <div class="login__header"><a href="/logoff">Logoff</a></div>
-          <div class="nome__header"><a href="">{{session.nome}}</a></div>
-          {% else %}
-          <div class="login__header"><a href="/login">Login</a></div>
-          <div class="nome__header"><a href="">ANONIMO</a></div>
-          {% endif %}
-    
-          <nav>
-            <ul class="menu__header">
-              <li><a href="/" class="menu__header-opcoes">Sair</a></li>
-            </ul>
-          </nav>
-    
+
+  <header class="header">
+    <div class="header--top">
+      <div class="logo">
+        <img src="/img/Logo.jpg" alt="Logo Aura Floral">
+      </div>
+      <div class="perfil">
+      <span class="material-symbols-outlined">
+        person
+      </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container"> 
+    <section class="box">
+      <div class="mensagem">
+        <p><strong>Bem-vindo(a) à Aura Floral!</strong><br>
+          Cadastre-se para receber novidades e ofertas especiais para deixar seu dia mais florido!
+        </p>
+      </div>
+      <form class="formulario">
+        <div class="inputs">
+          <label>
+            <input type="text" name="nome" placeholder="Nome Completo..." required>
+          </label>
+          <label>
+            <input type="tel" name="telefone" placeholder="Telefone..." required>
+          </label>
         </div>
-      </header>
-
-      <main class="container"> 
-
-        <section class="box">
-
-          <div class="mensagem">
-            <p><strong>Bem-vindo(a) à Aura Floral!</strong><br>
-              Cadastre-se para receber novidades e ofertas especiais para deixar seu dia mais florido!
-            </p>
-          </div>
-
-
-          <form class="formulario">
-
-            <div class="inputs">
-
-              <label>
-                <input type="text" name="nome" placeholder="Nome Completo..." required>
-              </label>
-
-              <label>
-                <input type="tel" name="telefone" placeholder="Telefone..." required>
-              </label>
-
-            </div>
-
-            <label>
-              <input type="text" name="cep" placeholder="Informe seu CEP..." required class="cep">
-            </label>
-
-            <button type="submit">Finalizar Cadastro</button>
-
-          </form>
-
-          <p class="login">Já possui cadastro? <a href="#">Clique aqui para logar</a></p>
-
-        </section>
-
+        <label>
+          <input type="text" name="cep" placeholder="Informe seu CEP..." required class="cep">
+        </label>
+        <button type="submit">Finalizar Cadastro</button>
+      </form>
+      <p class="login">Já possui cadastro? <a href="#">Clique aqui para logar</a></p>
+    </section>
   </main>
 
 </body>
+
 </html>
