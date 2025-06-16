@@ -222,13 +222,14 @@ ul li a.btn-header {
 }
 
 /* Footer */
-footer{
+.footer__creditos{
   background-color: #4B2C4F;
   text-align: center;
   padding: 15px 0;
-  position: relative;
   bottom: 0;
   width: 100%;
+  position: fixed;
+  color: #fff;
 }
 
 
