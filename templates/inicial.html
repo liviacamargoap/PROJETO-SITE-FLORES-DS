@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/static/styles/var.css">
     <link rel="stylesheet" href="/static/styles/reset.css">
     <link rel="stylesheet" href="/static/styles/global-inicial.css">
+    
     <title>Aura Floral</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
 
@@ -13,18 +14,14 @@
 <body>
     <header>
         <div class="header--top">
-          <div class="logo">
-            <img src="/static/img/Logo.jpg" alt="Logo Aura Floral">
-          </div>
+
           <nav>
            <button><a href="#">Login</a></button> 
             <ul>
-              <li><a href="#" class="btn-header">Catálogo</a></li>
-            <li><a href="#" class="btn-header">Arranjos</a></li>
-            <li><a href="#" class="btn-header">Buquês</a></li>
-            <li><a href="#" class="btn-header">Arranjos</a></li>
-            <li><a href="#" class="btn-header">Cestas de Presente</a></li>
-            <li><a href="#" class="btn-header">Inicio</a></li>
+              <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Buquês</a></li>
+              <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Cestas de Presente</a></li>
+              <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Arranjos</a></li>
+              <li><a href="/categoria/todos" class="menu__header-opcoes btn-header">Categorias</a></li>
             </ul>
             <div class="perfil">
               <img src="/static/img/iconProfileInicial.jpg" alt="Perfil">
