@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/reset.css">
-  <link rel="stylesheet" href="/styles/var.css">
-  <link rel="stylesheet" href="/styles/global.css">
-  <!-- ICONES GOOGLE -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
-  <title>Inicial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/var.css">
+    <link rel="stylesheet" href="/static/styles/reset.css">
+    <link rel="stylesheet" href="/static/styles/global.css">
+    <title>Aura Floral</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+
 </head>
-
 <body>
-  <header>
-    <div class="header--top">
-      <div class="logo">
-        <img src="/img/Logo.jpg" alt="Logo Aura Floral">
-      </div>
-      <nav>
-        <button><a href="#">Login</a></button>
-        <ul>
-          <li><a href="#" class="btn-header">Catálogo</a></li>
-          <li><a href="#" class="btn-header">Arranjos</a></li>
-          <li><a href="#" class="btn-header">Buquês</a></li>
-          <li><a href="#" class="btn-header">Arranjos</a></li>
-          <li><a href="#" class="btn-header">Cestas de Presente</a></li>
-          <li><a href="#" class="btn-header">Inicio</a></li>
-        </ul>
-        <div class="perfil">
-          <img src="/img/iconProfileInicial.jpg" alt="Perfil">
+    <header>
+        <div class="header--top">
+          <div class="logo">
+            <img src="/img/Logo.jpg" alt="Logo Aura Floral">
+          </div>
+          <nav>
+           <button><a href="#">Login</a></button> 
+            <ul>
+              <li><a href="#" class="btn-header">Catálogo</a></li>
+            <li><a href="#" class="btn-header">Arranjos</a></li>
+            <li><a href="#" class="btn-header">Buquês</a></li>
+            <li><a href="#" class="btn-header">Arranjos</a></li>
+            <li><a href="#" class="btn-header">Cestas de Presente</a></li>
+            <li><a href="#" class="btn-header">Inicio</a></li>
+            </ul>
+            <div class="perfil">
+              <img src="/img/iconProfileInicial.jpg" alt="Perfil">
+            </div>
+          </nav>
         </div>
-      </nav>
-    </div>
-  </header>
-
-  <section>
-    {% for produtos in lista_todos_produtos_html %}
-    <article class="produto__venda">
-      <div class="produto__imagem">
-        <!-- url da imagem -->
-        <!-- NECESSARIO FAZER INNER JOIN ENTRE DOIS SELECT PRA PEGAR AS FOTOS NO CONTROLER -->
-        <img src="{{ produtos.foto_principal }}" alt="{{ produtos.nome }}">
-      </div>
-
-      <div class="produto__descricao">
-        <h3>{{ produtos.nome }}</h3> <!-- Nome do produto -->
-        <p>{{ produtos.descricao }}</p> <!-- Descrição do produto -->
-        <p>Preço: R$ {{ produtos.preco }}</p> <!-- Preço do produto -->
-        <p>Categoria: {{ produtos.categoria }}</p> <!-- Categoria do produto -->
-      </div>
-
-      <button><a href="/detalhes">Ver mais <span class="material-symbols-outlined">
-            shopping_cart </span></a></button> <!-- Add rota p/ detalhes -->
-    </article>
-
-    {% endfor %}
-  </section>
-
-
+    </header>
+    <section class="banner">
+        <img src="/img/Banner.jpg" alt="Coleção Buquês de Rosas Nacionais">
+      </section>
+      <section class="produtos-inicial">
+        <div class="produto-inicial">
+            <img src="/img/Buque-de-rosas.jpg" alt="Buquê com 24 Rosas de Três Cores">
+            <p>Buquê com 24 Rosas de Três Cores.</p>
+            <button class="comprar-btn"><span class="material-symbols-outlined">
+shopping_cart
+</span></button>
+        </div>
+        <div class="produto-inicial">
+            <img src="/img/Buque-de-flores-campos.jpg" alt="Buquê de Flores do Campo em Tons Rosados">
+            <p>Buquê de Flores do Campo em Tons Rosados</p>
+            <button class="comprar-btn" ><span class="material-symbols-outlined">
+shopping_cart
+</span></button>
+          </div>
+          
+          <div class="produto-inicial">
+            <img src="/img/Buquê-de-Astromélias-e-Gérberas.jpg" alt="Buquê de Astromélias e Gérberas">
+            <p>Buquê de Astromélias e Gérberas</p>
+            <button class="comprar-btn" ><span class="material-symbols-outlined">
+shopping_cart
+</span></button>
+          </div>
+      </section>
 </body>
-
 </html>

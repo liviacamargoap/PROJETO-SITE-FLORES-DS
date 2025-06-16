@@ -10,21 +10,21 @@ create table tb_flores (
     categoria varchar(20)
 );
 
-INSERT INTO tb_flores (nome, descricao, preco, categoria)
-VALUES  ('buque1', 'descricao-buque1', 10.99, 'buque'),
-        ('buque2', 'descricao-buque2', 10.99, 'buque'),
-        ('buque3', 'descricao-buque3', 10.99, 'buque'),
-        ('buque4', 'descricao-buque4', 10.99, 'buque'),
+INSERT INTO tb_flores (IDflor, nome, descricao, preco, categoria)
+VALUES  (1, 'buque1', 'descricao-buque1', 10.99, 'buque'),
+        (2, 'buque2', 'descricao-buque2', 10.99, 'buque'),
+        (3, 'buque3', 'descricao-buque3', 10.99, 'buque'),
+        (4, 'buque4', 'descricao-buque4', 10.99, 'buque'),
 
-        ('cesta1', 'descricao-cesta1', 20.99, 'cesta'),
-        ('cesta2', 'descricao-cesta2', 20.99, 'cesta'),
-        ('cesta3', 'descricao-cesta3', 20.99, 'cesta'),
-        ('cesta4', 'descricao-cesta4', 20.99, 'cesta'),
+        (5, 'cesta1', 'descricao-cesta1', 20.99, 'cesta'),
+        (6, 'cesta2', 'descricao-cesta2', 20.99, 'cesta'),
+        (7, 'cesta3', 'descricao-cesta3', 20.99, 'cesta'),
+        (8, 'cesta4', 'descricao-cesta4', 20.99, 'cesta'),
 
-        ('arranjo1', 'descricao-arranjo1', 15.99, 'arranjo'),
-        ('arranjo2', 'descricao-arranjo2', 15.99, 'arranjo'),
-        ('arranjo3', 'descricao-arranjo3', 15.99, 'arranjo'),
-        ('arranjo4', 'descricao-arranjo4', 15.99, 'arranjo');
+        (9, 'arranjo1', 'descricao-arranjo1', 15.99, 'arranjo'),
+        (10, 'arranjo2', 'descricao-arranjo2', 15.99, 'arranjo'),
+        (11, 'arranjo3', 'descricao-arranjo3', 15.99, 'arranjo'),
+        (12, 'arranjo4', 'descricao-arranjo4', 15.99, 'arranjo');
 
 
 create table tb_fotos_produto(
