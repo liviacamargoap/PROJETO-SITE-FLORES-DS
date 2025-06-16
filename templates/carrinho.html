@@ -10,8 +10,30 @@
 </head>
 <body>
     <header class="top-bar">
-    <a href="/" class="btn-voltar">Voltar</a>
-  <h1>Aura Floral</h1>
+        <div class="header--top">
+            <div class="logo">
+              <img src="/static/img/Logo.jpg" alt="Logo Aura Floral">
+            </div>
+            <nav>
+              {% if session.nome %}
+              <div class="login__header"><a href="/logoff">Logoff</a></div>
+              <div class="nome__header"><a href="">{{session.nome}}</a></div>
+              {% else %}
+              <div class="login__header"><a href="/login">Login</a></div>
+              <div class="nome__header"><a href="">ANONIMO</a></div>
+              {% endif %}
+              <ul>
+                <li><a href="/" class="menu__header-opcoes">Início</a></li>
+                <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Buquês</a></li>
+                <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Cestas de Presente</a></li>
+                <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Arranjos</a></li>
+                <li><a href="/categoria/todos" class="menu__header-opcoes btn-header">Categorias</a></li>
+              </ul>
+              <div class="perfil">
+                <img src="/static/img/iconProfileInicial.jpg" alt="Perfil">
+              </div>
+            </nav>
+          </div>
 </header>
 
     <div class="container">

@@ -12,19 +12,25 @@
 </head>
 <body>
     <header>
+      
         <div class="header--top">
           <div class="logo">
             <img src="/static/img/Logo.jpg" alt="Logo Aura Floral">
           </div>
           <nav>
-           <button><a href="#">Login</a></button> 
+            {% if session.nome %}
+            <div class="login__header"><a href="/logoff">Logoff</a></div>
+            <div class="nome__header"><p>{{session.nome}}</p></div>
+            {% else %}
+            <div class="login__header"><a href="/login">Login</a></div>
+            <div class="nome__header"><a href="">ANONIMO</a></div>
+            {% endif %}
             <ul>
-              <li><a href="#" class="btn-header">Catálogo</a></li>
-            <li><a href="#" class="btn-header">Arranjos</a></li>
-            <li><a href="#" class="btn-header">Buquês</a></li>
-            <li><a href="#" class="btn-header">Arranjos</a></li>
-            <li><a href="#" class="btn-header">Cestas de Presente</a></li>
-            <li><a href="#" class="btn-header">Inicio</a></li>
+              <li><a href="/" class="menu__header-opcoes">Início</a></li>
+              <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Buquês</a></li>
+              <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Cestas de Presente</a></li>
+              <li><a href="/categoria/<filtro>" class="menu__header-opcoes btn-header">Arranjos</a></li>
+              <li><a href="/categoria/todos" class="menu__header-opcoes btn-header">Categorias</a></li>
             </ul>
             <div class="perfil">
               <img src="/static/img/iconProfileInicial.jpg" alt="Perfil">
