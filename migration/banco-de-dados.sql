@@ -37,9 +37,13 @@ create table tb_fotos_produto(
     foto_principal varchar(250)
 );
 
-INSERT INTO tb_fotos_produto(foto_principal, url_foto1, url_foto2, url_foto3)
+INSERT INTO tb_fotos_produto(IDflor, foto_principal, url_foto1, url_foto2, url_foto3)
 -- arranjo
-VALUES  ('https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+VALUES  (9, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+(10, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+(11, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+(12, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+
 -- buque
 ('https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
 -- cestas
@@ -58,3 +62,10 @@ create table tb_compra (
 	IDflor INT,
     FOREIGN KEY (IDflor) REFERENCES tb_flores(IDflor)
 );
+
+
+
+SELECT tb_flores.nome, tb_flores.descricao, tb_flores.preco, tb_flores.categoria, tb_fotos_produto.foto_principal
+                        FROM tb_flores
+                        INNER JOIN tb_fotos_produto ON tb_flores.IDflor = tb_fotos_produto.IDflor
+                        WHERE tb_flores.categoria = 'buque'

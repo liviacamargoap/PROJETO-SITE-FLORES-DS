@@ -13,6 +13,7 @@ body {
    background: linear-gradient(to bottom, var(--rosa-empoeirado), var( --ameixa-escura));
   padding: 20px 40px;
   box-sizing: border-box;
+  font-family: 'Anuphan';
 }
 
 /* Parte de cima do header (logo + perfil) */

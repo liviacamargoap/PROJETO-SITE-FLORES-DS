@@ -162,6 +162,7 @@ header {
   background-color: var( --ameixa-escura);
   border-bottom: 1px solid #ddd;
   padding: 5px 20px;
+  
 }
 
 .header--top{
@@ -169,6 +170,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  
 }
 
 
@@ -201,6 +203,7 @@ ul{
   list-style: none;
   display: flex;
   gap: 15px;
+  
 }
 
 
