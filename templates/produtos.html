@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles/var.css">
+  <link rel="stylesheet" href="/static/styles/reset.css">
+  <link rel="stylesheet" href="/static/styles/global.css">
+  <title>categorias</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container__header">
+
+      <!-- LOGIN E LOGOFF IF COM JINJA -->
+      {% if session.nome %}
+      <div class="login__header"><a href="/logoff">Logoff</a></div>
+      <div class="nome__header"><a href="">{{session.nome}}</a></div>
+      {% else %}
+      <div class="login__header"><a href="/login">Login</a></div>
+      <div class="nome__header"><a href="">ANONIMO</a></div>
+      {% endif %}
+
+      <nav>
+        <ul class="menu__header">
+          <li><a href="/" class="menu__header-opcoes">Início</a></li>
+          {% for categoria in categorias%}
+          <li><a href="/categoria/{{categoria.categoria}}" class="menu__header-opcoes">{{categoria.categoria}}</a></li>
+          {%endfor%}
+          <li><a href="/categoria/todos" class="menu__header-opcoes">Categorias</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="banner__promocoes">
+      <img src="/static/img/cardRosasNacionais.png" alt="Banner">
+    </section>
+
+
+
+
+
+  <section class="produtos">
+
+
+    {% for produto in lista_produtos_html %}
+    <article class="produto__venda">
+    <div class="produto__imagem">
+      <!-- url da imagem -->
+      <!-- NECESSARIO FAZER INNER JOIN ENTRE DOIS SELECT PRA PEGAR AS FOTOS NO CONTROLER -->
+        <img src="{{ produto.foto_principal }}" alt="Buque de {{ produto.nome }}">
+    </div>
+
+    <div class="produto__descricao">
+        <h3>{{ produto.nome }}</h3> <!-- Nome do produto -->
+        <p>{{ produto.descricao }}</p> <!-- Descrição do produto -->
+        <p>Preço: R$ {{ produto.preco }}</p> <!-- Preço do produto -->
+        <p>Categoria: {{ produto.categoria }}</p> <!-- Categoria do produto -->
+    </div>
+
+    <button><a href="/detalhes">Ver mais</a></button> <!-- Add rota p/ detalhes -->
+</article>
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+  </main>
+
+  <footer class="footer__creditos">
+    <p>&copy; 2025 Aura Floral.</p>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: white;
+}
+
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-primaria);
+  padding: 10px 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-placeholder {
+  width: 80px;
+  height: 25px;
+  background-color: var(--cor-secundaria);
+  border-radius: var(--borda-arredondada);
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+
+nav ul li button {
+  padding: 6px 12px;
+  background-color: var(--cor-secundaria);
+  border: none;
+  border-radius: var(--borda-arredondada);
+  color: var(--cor-destaque);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li button:hover {
+  background-color: #96699d;
+}
+
+.banner {
+  height: 200px;
+  background-color: var(--cor-secundaria);
+  margin-top: 10px;
+}
+
+
+.produtos {
+  background-color: var(--cor-escura);
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.produto .imagem {
+  width: 100px;
+  height: 120px;
+  background-color: var(--cinza-claro);
+  margin-bottom: 10px;
+}
+
+.produto .descricao {
+  width: 100px;
+  height: 20px;
+  background-color: var(--cinza-claro);
+}
+
+.container{
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--cor-primaria);
+  padding: 10px 20px;
+  gap: 20px;
+  color: white;
+}
+
+.top-bar h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+.btn-voltar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-destaque);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 2px solid var(--cor-destaque);
+}
+
+.btn-voltar:hover {
+  background-color: var(--cor-secundaria);
+  color: white;
+  border-color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Estilos base para ambos os botões */
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Botão Carrinho */
+button.carrinho {
+  background-color: var(--cor-secundaria);
+  color: white;
+}
+
+button.carrinho:hover {
+  background-color: var(--cor-primaria);
+}
+
+/* Botão Cancelar */
+button.cancelar {
+  background-color: var(--cor-destaque);
+  color: var(--cor-escura);
+}
+
+button.cancelar:hover {
+  background-color: var(--cinza-claro);
+  color: var(--cor-escura);
+}
+
+.footer__creditos{
+  background-color: #4B2C4F;
+  text-align: center;
+  padding: 15px 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  color: #fff;
+}
+
+.logo img{
+  height: 60px;
+}   
+
+header {
+  background-color: var( --ameixa-escura);
+  border-bottom: 1px solid #ddd;
+  padding: 5px 20px;
+}
+
+.header--top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+nav{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav button{
+  background-color: var( --rosa-empoeirado);
+  border: 1px solid #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button a {
+  text-decoration: none;
+  color: #2C1435;
+}
+
+nav button:hover{
+  background-color:var( --rosa-empoeirado);
+}
+
+
+ul{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+
+ul li a.btn-header {
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+
+
+.perfil img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
