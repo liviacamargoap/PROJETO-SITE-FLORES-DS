@@ -55,8 +55,7 @@ VALUES  (9, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.
 (8, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp');
 
 create table tb_usuario(
-    nome varchar(50) NOT NULL,
-    email varchar(50) PRIMARY KEY, 
+    usuario varchar(50) PRIMARY KEY NOT NULL,
     telefone int NOT NULL,
     endereco varchar(50) NOT NULL,
     senha varchar(20) NOT NULL
@@ -67,3 +66,6 @@ create table tb_compra (
 	IDflor INT,
     FOREIGN KEY (IDflor) REFERENCES tb_flores(IDflor)
 );
+
+SELECT categoria from tb_flores
+GROUP BY categoria;

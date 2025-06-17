@@ -3,7 +3,7 @@ from flask import session
 from data.conexao import Conexao
 
 class Usuario:
-        def cadastrar(nome, email, telefone, endereco, senha):
+        def cadastrar(usuario, telefone, endereco, senha):
                 #  criptografando a senha
                 senha = sha256(senha.encode()).hexdigest()
 
@@ -15,10 +15,10 @@ class Usuario:
 
                 # criando o SQL que será executado
                 sql = """INSERT INTO tb_usuario
-                        (nome, email, telefone, endereco, senha)
+                        (usuario, telefone, endereco, senha)
                         VALUES
-                        (%s, %s, %s, %s, %s)"""
-                valores=(nome, email, telefone, endereco, senha)
+                        (%s, %s, %s, %s)"""
+                valores=(usuario, telefone, endereco, senha)
 
                 # executando o comando 
                 cursor.execute(sql,valores)
@@ -30,7 +30,7 @@ class Usuario:
                 cursor.close()
                 conexao.close()
     
-        def login(email, senha):
+        def login(usuario, senha):
                 #  criptografando a senha
                 senha = sha256(senha.encode()).hexdigest()
 
@@ -41,10 +41,10 @@ class Usuario:
                 cursor = conexao.cursor(dictionary=True)
 
                 # criando o SQL que será executado
-                sql = """SELECT email, nome FROM tb_usuario
-                        WHERE email = %s
+                sql = """SELECT usuario FROM tb_usuario
+                        WHERE usuario = %s
                         AND senha = %s """
-                valores=(email, senha)
+                valores=(usuario, senha)
 
                 # executando o comando 
                 cursor.execute(sql,valores)
@@ -59,8 +59,7 @@ class Usuario:
                 conexao.close()
 
                 if resultado:
-                        session["email_usuario"] = resultado["email"]
-                        session["nome_usuario"] = resultado["nome"]
+                        session["nome_usuario"] = resultado["usuario"]
                         return True
                 else:
                         return False
