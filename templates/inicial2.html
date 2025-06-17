@@ -19,14 +19,14 @@
           <div class="login__header"><a href="/logoff">Logoff</a></div>
           <div class="nome__header"><a href="">{{session.nome}}</a></div>
           {% else %}
-          <div class="login__header"><a href="/pagina_cadastro">Cadastro/Login</a></div>
+          <div class="login__header"><a href="/pagina/cadastro">Cadastro/Login</a></div>
           <div class="nome__header"><a href="">ANONIMO</a></div>
           {% endif %}
           <nav>
             <ul>
-              {% for categoria in categorias%}
+              {% for categoria in categorias %}
               <li><a href="/categoria/{{categoria.categoria}}" class="menu__header-opcoes btn-header">{{categoria.categoria}}</a></li>
-              {%endfor%}
+              {% endfor %}
               <li><a href="/categoria/todos" class="menu__header-opcoes btn-header">Categorias</a></li>
             </ul>
             <div class="perfil">
