@@ -16,10 +16,10 @@ class Produtos:
                 
                 # sql = """SELECT nome, descricao, preco, categoria FROM tb_flores
                 #         WHERE categoria = %s """
-                sql = """SELECT tb_flores.nome, tb_flores.descricao, tb_flores.preco, tb_flores.categoria, tb_fotos_produto.foto_principal
+                sql = """SELECT tb_flores.nome, tb_flores.descricao, tb_flores.preco, tb_flores.id_categoria, tb_fotos_produto.foto_principal
                         FROM tb_flores
                         INNER JOIN tb_fotos_produto ON tb_flores.IDflor = tb_fotos_produto.IDflor
-                        WHERE tb_flores.categoria = %s"""
+                        WHERE tb_flores.id_categoria = %s;"""
 
 
                 valores=(filtro,)
