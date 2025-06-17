@@ -37,13 +37,22 @@ create table tb_fotos_produto(
     foto_principal varchar(250)
 );
 
-INSERT INTO tb_fotos_produto(foto_principal, url_foto1, url_foto2, url_foto3)
+INSERT INTO tb_fotos_produto(IDflor, foto_principal, url_foto1, url_foto2, url_foto3)
 -- arranjo
-VALUES  ('https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+VALUES  (9, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+		(10, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+        (11, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+        (12, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
 -- buque
-('https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+(1, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+(2, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+(3, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
+(4, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-27-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp'),
 -- cestas
-('https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp');
+(5, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp'),
+(6, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp'),
+(7, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp'),
+(8, 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-234-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-207-1.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-80-0.webp', 'https://www.isabelaflores.com/media/catalog/product/a/l/alta-325-2.webp');
 
 create table tb_usuario(
     nome varchar(50) NOT NULL,
