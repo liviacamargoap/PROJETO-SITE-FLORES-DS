@@ -20,7 +20,7 @@ def login():
     senha = request.form.get("senha")
 
     login_sucesso = Usuario.login(usuario, senha) 
-
+# banana
     if login_sucesso: 
         return redirect("/")
     else:
