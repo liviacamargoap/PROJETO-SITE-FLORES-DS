@@ -4,6 +4,50 @@ body {
   color: white;
 }
 
+html{
+
+  overflow: hidden;
+
+}
+
+.main{
+
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+
+}
+
+.material-symbols-outlined{
+
+  color: var(--rosa-empoeirado);
+
+}
+
+.icone-logo{
+
+  width: 74px;
+  height: 65px;
+
+  margin-right: 140px;
+
+}
+
+.banner{
+
+  width: 90%;
+  height: 100%;
+  border-radius: 38px;
+
+  margin: 0 auto;
+ 
+}
+
+.banner-img{
+
+
+
+}
 
 .top-bar {
   display: flex;
@@ -156,7 +200,7 @@ button.cancelar:hover {
 /* ------------------------------------------------------------------------- */
 .logo img{
   height: 60px;
-}   
+}  
 
 header {
   background-color: var( --ameixa-escura);
@@ -254,7 +298,7 @@ footer{
 
 /* Descrição */
 .produto-descricao {
-  background-color: var( --rosa-empoeirado); 
+  background-color: var( --rosa-empoeirado);
   color: #fff;
   margin-left: 20px;
   padding: 10px;

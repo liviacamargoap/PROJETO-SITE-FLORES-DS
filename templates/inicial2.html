@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles/var.css">
-    <link rel="stylesheet" href="/static/styles/reset.css">
-    <link rel="stylesheet" href="/static/styles/global-inicial.css">
-    
-    <title>Aura Floral</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles/var.css">
+  <link rel="stylesheet" href="/static/styles/reset.css">
+  <link rel="stylesheet" href="/static/styles/global-inicial.css">
+
+  <title>Aura Floral</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+
+  <!-- link do icone de profile -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle" />
 
 </head>
+
+
 <body>
-    <header>
-        <div class="header--top">
+  <header>
+    <div class="header--top">
+
+      <img class="icone-logo" src="/static/img/logoAuraFloralInicio.svg" alt="">
 
           {% if session.nome %}
           <div class="login__header"><a href="/logoff">Logoff</a></div>
@@ -31,37 +41,64 @@
             </ul>
             <div class="perfil">
               <a href="/logoff"><span class="material-symbols-outlined">account_circle</span></a>
-              
+             
             </div>
           </nav>
         </div>
     </header>
+      {% if session.nome %}
+      <div class="login__header"><a href="/logoff">Logoff</a></div>
+      <div class="nome__header"><a href="">{{session.nome}}</a></div>
+      {% else %}
+      <div class="login__header"><a href="/pagina_cadastro">Cadastro/Login</a></div>
+      <div class="nome__header"><a href="">ANONIMO</a></div>
+      {% endif %}
+      <nav>
+        <ul>
+          {% for categoria in categorias%}
+          <li><a href="/categoria/{{categoria.categoria}}"
+              class="menu__header-opcoes btn-header">{{categoria.categoria}}</a></li>
+          {%endfor%}
+          <li><a href="/categoria/todos" class="menu__header-opcoes btn-header">Categorias</a></li>
+        </ul>
+        <div class="perfil">
+          <a href="/logoff"><span class="material-symbols-outlined">account_circle</span></a>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
 
     <section class="banner">
-        <img src="/static/img/Banner.jpg" alt="Coleção Buquês de Rosas Nacionais">
+      <img class="banner-img" src="/static/img/cardRosasNacionais.png" alt="Coleção Buquês de Rosas Nacionais">
     </section>
 
 
-      <section class="produtos-inicial">
-        <div class="produto-inicial">
-          {% for produto in lista_produtos_html %}
-          <img src="{{ produto.foto_principal }}" alt="{{ produto.nome }}">
-          <h3>{{ produto.nome }}</h3>
-          <p>{{ produto.descricao }}</p>
-          <p>Preço: R$ {{ produto.preco }}</p>
-          <p>Categoria: {{ produto.categoria }}</p>
+    <section class="produtos-inicial">
+      <div class="produto-inicial">
+        {% for produto in lista_produtos_html %}
+        <img src="{{ produto.foto_principal }}" alt="{{ produto.nome }}">
+        <h3>{{ produto.nome }}</h3>
+        <p>{{ produto.descricao }}</p>
+        <p>Preço: R$ {{ produto.preco }}</p>
+        <p>Categoria: {{ produto.categoria }}</p>
 
-          <a href="/detalhes"><button class="comprar-btn"><span class="material-symbols-outlined">
-shopping_cart
-</span></button></a>
+        <a href="/detalhes"><button class="comprar-btn"><span class="material-symbols-outlined">
+              shopping_cart
+            </span></button></a>
 
         {% endfor %}
-        </div>
+      </div>
 
 
-      <footer class="footer__creditos">
-        <p>&copy; 2025 Aura Floral.</p>
-      </footer>
+  </main>
+
+  <footer class="footer__creditos">
+    <p>&copy; 2025 Aura Floral.</p>
+  </footer>
 
 </body>
+
 </html>
