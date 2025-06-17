@@ -66,3 +66,30 @@ class Produtos:
 
                 return resultado
         
+        def obter_categorias():
+                # criando a conexao com banco de dados
+                conexao = Conexao.criar_conexao()
+
+                # o cursor é a ponte que vai do python ate o banco de dados
+                cursor = conexao.cursor(dictionary = True)
+
+                # criando o SQL que será executado
+                # NECESSARIO FAER INNER JOIN ENTRE DOIS SELECT PRA PEGAR AS FOTOS
+                
+                
+                # sql = """SELECT nome, descricao, preco, categoria FROM tb_flores
+                #         WHERE categoria = %s """
+                sql = """SELECT categoria from tb_flores
+                        GROUP BY categoria;"""
+
+
+                # executando o comando 
+                cursor.execute(sql, )
+
+                resultado = cursor.fetchall()
+
+                # fecho a conexao com o banco
+                cursor.close()
+                conexao.close()
+
+                return resultado

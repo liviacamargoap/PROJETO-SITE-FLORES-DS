@@ -7,8 +7,9 @@ app.secret_key = "key"
 
 @app.route("/")
 def pagina_inicial():
-    return render_template("inicial.html")
+    return render_template("inicial2.html")
 
+# LOGIN E CADASTRO
 @app.route("/login")
 def login():
     # session = uma lista | guardar informações do usuario
@@ -28,28 +29,33 @@ def pagina_cadastro():
 
 
 
-
+# CATEGORIAS PRODUTOS
 # ajuda alex Filtro
 # ve a categoria selecionada e direciona pro sql (cod no controller)
 @app.route("/categoria/<filtro>")
 def pagina_produto(filtro):
     lista_produtos = Produtos.obter_produtos(filtro)
-    return render_template("produtos.html", lista_produtos_html = lista_produtos) 
+    return render_template("inicial2.html", lista_produtos_html = lista_produtos) 
 
 @app.route("/categoria/todos")
 def pagina_produtos():
     lista_todos_produtos = Produtos.obter_todos_produtos()
-    return render_template("inicial.html", lista_todos_produtos_html = lista_todos_produtos) 
+    return render_template("inicial2.html", lista_todos_produtos_html = lista_todos_produtos) 
+
+@app.route("/categorias")
+def categorias():
+    lista_categorias = Produtos.obter_categorias()
+    return render_template("inicial2.html", lista_categorias_html = lista_categorias)
 
 
 
 
 
 
-
-@app.route("/compras")
+# CARRINHO DETALHES
+@app.route("/carrinho")
 def pagina_compra():
-    return render_template("compras.html")
+    return render_template("carrinho.html")
 
 @app.route("/detalhes")
 def pagina_detalhes():
