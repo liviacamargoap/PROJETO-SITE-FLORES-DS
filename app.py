@@ -8,10 +8,10 @@ app.secret_key = "key"
 
 @app.route("/")
 def pagina_inicial():
-    # produtos = Produtos.obter_produtos()
-    # categorias = Produtos.obter_categorias()
+    produtos = Produtos.obter_produtos()
+    categorias = Produtos.obter_categorias()
 
-    return render_template("inicial2.html")
+    return render_template("inicial2.html", categorias = categorias, produtos = produtos)
 
 # LOGIN E CADASTRO
 @app.route("/login")
