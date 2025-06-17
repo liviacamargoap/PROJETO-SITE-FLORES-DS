@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, session
 from model.produtos_controler import Produtos
+from model.user_controler import Usuario
 
 app = Flask(__name__)
 
@@ -12,11 +13,16 @@ def pagina_inicial():
 # LOGIN E CADASTRO
 @app.route("/login")
 def login():
+    fazer_login = Usuario.login()
     # session = uma lista | guardar informações do usuario
     # criou uma lista "usuario" para guardar as listas (organizar)
     session["nome"] = "Usuário"
     session["foto"] = "https://img.freepik.com/fotos-premium/foto-de-grande-angular-de-uma-unica-arvore-crescendo-sob-um-ceu-nublado-durante-um-por-do-sol-cercado-por-grama_181624-22807.jpg?semt=ais_hybrid&w=740"
-    return redirect("/")
+    return redirect(fazer_login, "/")
+
+@app.route("/pagina/login")
+def pagina_login():
+    return render_template("login.html")
 
 @app.route("/logoff")
 def logoff():
@@ -24,8 +30,9 @@ def logoff():
     return redirect("/")
 
 @app.route("/cadastro")
-def pagina_cadastro():
-    return render_template("cadastro.html")
+def cadastro():
+    fazer_cadastro = Usuario.cadastrar()
+    return redirect(fazer_cadastro, "/pagina/login")
 
 
 
